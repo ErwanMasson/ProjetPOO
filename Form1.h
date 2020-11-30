@@ -9,9 +9,6 @@ namespace CppCLRWinformsProjekt {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
-	/// <summary>
-	/// Zusammenfassung für Form1
-	/// </summary>
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
@@ -19,14 +16,11 @@ namespace CppCLRWinformsProjekt {
 		{
 			InitializeComponent();
 			//
-			//TODO: Konstruktorcode hier hinzufügen.
+			//TODO: Konstruktorcode hier hinzufÃ¼gen.
 			//
 		}
 
 	protected:
-		/// <summary>
-		/// Verwendete Ressourcen bereinigen.
-		/// </summary>
 		~Form1()
 		{
 			if (components)
@@ -36,16 +30,9 @@ namespace CppCLRWinformsProjekt {
 		}
 
 	private:
-		/// <summary>
-		/// Erforderliche Designervariable.
-		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Erforderliche Methode für die Designerunterstützung.
-		/// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
-		/// </summary>
 		void InitializeComponent(void)
 		{
 			this->components = gcnew System::ComponentModel::Container();
