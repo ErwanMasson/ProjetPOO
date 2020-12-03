@@ -1,14 +1,13 @@
+#include "form2.h"
+
 #pragma once
-
 namespace CppCLRWinformsProjekt {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
@@ -34,7 +33,7 @@ namespace CppCLRWinformsProjekt {
 	protected:
 
 	private:
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		void InitializeComponent(void)
@@ -66,6 +65,7 @@ namespace CppCLRWinformsProjekt {
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Personnel";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
 			// button2
 			// 
@@ -76,6 +76,7 @@ namespace CppCLRWinformsProjekt {
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"Clients";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
 			// 
 			// button3
 			// 
@@ -86,6 +87,7 @@ namespace CppCLRWinformsProjekt {
 			this->button3->TabIndex = 3;
 			this->button3->Text = L"Stock";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
 			// 
 			// button4
 			// 
@@ -96,6 +98,7 @@ namespace CppCLRWinformsProjekt {
 			this->button4->TabIndex = 4;
 			this->button4->Text = L"Commandes";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &Form1::button4_Click);
 			// 
 			// button5
 			// 
@@ -125,5 +128,21 @@ namespace CppCLRWinformsProjekt {
 
 		}
 #pragma endregion
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		Form2^ form2 = gcnew Form2("personnel");
+		form2->Show();
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		Form2^ form2 = gcnew Form2("clients");
+		form2->Show();
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		Form2^ form2 = gcnew Form2("stock");
+		form2->Show();
+	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		Form2^ form2 = gcnew Form2("commandes");
+		form2->Show();
+	}
 };
 }
